@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Professor | Reclass</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .sidebar {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--card-shadow);
+            height: fit-content;
+        }
+        .sidebar-menu {
+            list-style: none;
+            margin-top: 20px;
+        }
+        .sidebar-menu li {
+            margin-bottom: 15px;
+        }
+        .sidebar-menu a {
+            text-decoration: none;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        .sidebar-menu a:hover, .sidebar-menu a.active {
+            color: var(--primary-color);
+        }
+        .table-container {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            text-align: left;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        th {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        .btn-action {
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        .btn-edit { background: #e7f1ff; color: #0056b3; }
+        .btn-delete { background: #f8d7da; color: #721c24; }
+        .btn-attendance { background: #d4edda; color: #155724; }
+        .modal-form {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="imgs/wizlog.webp" alt="Wiz Logo" onerror="this.src='https://via.placeholder.com/150x50?text=Wiz+Logo'">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="perfil.html"><i class="fas fa-user-circle"></i> Meu Perfil</a></li>
+                    <li><a href="selecao-login.html" class="btn-nav">Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="dashboard-grid">
+            <aside class="sidebar">
+                <h3>Olá, Prof. Ricardo!</h3>
+                <ul class="sidebar-menu">
+                    <li><a href="#" class="active"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="#abrir-aula"><i class="fas fa-plus-circle"></i> Abrir Nova Aula</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> Meus Alunos</a></li>
+                    <li><a href="perfil.html"><i class="fas fa-cog"></i> Configurações</a></li>
+                </ul>
+            </aside>
+
+            <section class="content">
+                <div id="abrir-aula" class="modal-form">
+                    <h3>Abrir Nova Aula de Reposição</h3>
+                    <form action="#" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                        <div class="form-group">
+                            <label>Título da Aula</label>
+                            <input type="text" placeholder="Ex: Business English" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Data</label>
+                            <input type="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Horário</label>
+                            <input type="time" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Vagas</label>
+                            <input type="number" min="1" value="10" required>
+                        </div>
+                        <div class="form-group" style="grid-column: span 2;">
+                            <button type="submit" class="btn btn-primary">Criar Aula</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="table-container">
+                    <h3>Minhas Aulas Agendadas</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Aula</th>
+                                <th>Data</th>
+                                <th>Alunos</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Inglês Intermediário</td>
+                                <td>15/10/2026</td>
+                                <td>08/10</td>
+                                <td>
+                                    <a href="#" class="btn-action btn-attendance"><i class="fas fa-check"></i> Presença</a>
+                                    <a href="#" class="btn-action btn-edit"><i class="fas fa-edit"></i></a>
+                                    <a href="#" class="btn-action btn-delete"><i class="fas fa-trash"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Reclass - Sistema de Reposição de Aulas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

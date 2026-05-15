@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Aluno | Reclass</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="imgs/wizlog.webp" alt="Wiz Logo" onerror="this.src='https://via.placeholder.com/150x50?text=Wiz+Logo'">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="loginP.html">Sou Professor</a></li>
+                    <li><a href="aulas.html" class="btn-nav">Agendamento</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="login-section">
+            <div class="login-container">
+                <h2>Login do Aluno</h2>
+                <form action="#">
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> E-mail</label>
+                        <input type="email" id="email" placeholder="Seu e-mail cadastrado" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password"><i class="fas fa-lock"></i> Senha</label>
+                        <input type="password" id="password" placeholder="Sua senha" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-login">Entrar</button>
+                </form>
+                <div class="login-footer">
+                    <p>Ainda não tem conta? <a href="#">Cadastre-se aqui</a></p>
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Reclass - Sistema de Reposição de Aulas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
