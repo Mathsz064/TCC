@@ -1,3 +1,6 @@
+CSS 
+
+
 /* 
    Reclass - Professional CSS Refactoring
    Author: Manus Professional Web Dev
@@ -344,7 +347,7 @@ img {
 
 /* PAG LOGIN */
 .login-section {
-    padding: 0px 0;
+    padding: 100px 0;
     display: flex;
     justify-content: center;
 }
@@ -736,151 +739,3 @@ th { color: var(--primary-color); }
     color: #666;
     margin-bottom: 25px;
 }
-
-/* CADASTRO */
-.cadastro-section {
-            padding: 60px ;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: calc(100vh - 80px);
-        }
-
-        .cadastro-container {
-            background-color: var(--bg-white);
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: var(--shadow-lg);
-            width: 100%;
-            max-width: 500px;
-            border: 1px solid #edf2f7;
-            transition: var(--transition);
-        }
-
-        .cadastro-container:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .cadastro-container h2 {
-            text-align: center;
-            margin-bottom: 10px;
-            color: var(--primary-color);
-            font-size: 2rem;
-        }
-
-        .cadastro-container .subtitulo {
-            text-align: center;
-            color: var(--text-light);
-            margin-bottom: 30px;
-            font-size: 0.95rem;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: var(--text-dark);
-        }
-
-        .form-group input,
-        .form-group select {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-family: inherit;
-            font-size: 1rem;
-            transition: var(--transition);
-            background-color: var(--bg-white);
-        }
-
-        .form-group input:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.15);
-        }
-
-        .codigo-info {
-            background-color: var(--bg-light);
-            border-left: 4px solid var(--accent-color);
-            padding: 12px;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            color: var(--text-light);
-            margin-top: -5px;
-            margin-bottom: 20px;
-        }
-
-        .tipo-usuario {
-            margin-bottom: 20px;
-            padding: 12px;
-            border-radius: 6px;
-            background-color: rgba(30, 58, 138, 0.08);
-            color: var(--primary-color);
-            font-weight: 600;
-            text-align: center;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            gap: 8px;
-            border: none;
-            transition: var(--transition);
-        }
-
-        .btn-primary {
-            background-color: var(--primary-color);
-            color: white;
-            box-shadow: var(--shadow-md);
-        }
-
-        .btn-primary:hover {
-            background-color: #1a337a;
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .btn-cadastro {
-            width: 100%;
-            margin-top: 10px;
-        }
-
-        .cadastro-footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 1rem;
-            color: var(--text-light);
-            font-weight: bold;
-        }
-
-        .cadastro-footer a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .cadastro-footer a:hover {
-            color: var(--secondary-color);
-            text-decoration: underline;
-            font-weight: bolder;
-        }
-
-        .site-footer {
-            padding: 30px 0;
-            text-align: center;
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }

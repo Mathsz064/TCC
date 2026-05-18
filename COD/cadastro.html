@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro - Reclass</title>
+
+    <!-- Fonte usada no mesmo padrão do CSS enviado -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+   
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo"></a>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="aulas.html" class="btn-nav">Agendamento</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="cadastro-section">
+            <div class="cadastro-container">
+                <h2>Criar Cadastro</h2>
+                <p class="subtitulo">Preencha os dados abaixo para acessar a plataforma.</p>
+
+                <form action="#" method="post" id="formCadastro">
+                    <div class="form-group">
+                        <label for="nome">Nome completo</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" name="senha" placeholder="Crie uma senha" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmarSenha">Confirmar senha</label>
+                        <input type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Confirme sua senha" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="codigoX">Código Para Professor <span style="color: var(--text-light); font-weight: 400;">(opcional)</span></label>
+                        <input type="text" id="codigoX" name="codigoX" placeholder="Preencha somente se você for professor">
+                    </div>
+
+                    <input type="hidden" id="tipoUsuario" name="tipoUsuario" value="aluno">
+
+                    <button type="submit" class="btn btn-primary btn-cadastro">Cadastrar</button>
+                </form>
+
+                <div class="login-footer">
+                    Já tem uma conta? <a href="login.html">Entrar</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Reclass. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
