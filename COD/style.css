@@ -513,6 +513,52 @@ img {
     box-shadow: var(--card-shadow);
     border-top: 15px solid var(--primary-color);
 }
+
+.selection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.selection-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid var(--primary-color);
+    color: inherit;
+     
+}
+
+.selection-card:hover {
+    transform: translateY(-10px);
+    border: 2px solid var(--primary-color);
+}
+
+.selection-card i {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.selection-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.selection-card p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
 .login-container {
     background-color: white;
     padding: 40px;
@@ -655,174 +701,55 @@ img {
 
 
 
-.selection-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 800px;
-    margin: 0 auto;
-    
-}
-
-.selection-card {
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: var(--shadow-md);
-    transition: var(--transition);
-    cursor: pointer;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid var(--primary-color);
-}
-
-     
-    
-    
-
-
-.selection-card:hover {
-    transform: translateY(-10px);
-    border: 2px solid var(--primary-color);
-}
-
-.selection-card i {
-    font-size: 4rem;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-}
-
-.selection-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-.selection-card p {
-    color: #666;
-    margin-bottom: 25px;
-}
-
-
-
-
-
-.btn-action {
-    padding: 5px 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 0.8rem;
-    font-weight: 600;
-    transition: var(--transition);
-}
-
-.btn-edit { background: #e7f1ff; color: #0056b3; }
-.btn-delete { background: #f8d7da; color: #721c24; }
-.btn-attendance { background: #d4edda; color: #155724; }
-
-.modal-form {
-    background: var(--white);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: var(--card-shadow);
-    margin-bottom: 30px;
-}
-
-
+/* ====================================CONFIRMAÇÃO============================== */
 .confirmation-container {
-    max-width: 600px;
-    margin: 80px auto;
-    background: var(--white);
-    padding: 50px;
-    border-radius: 15px;
-    box-shadow: var(--card-shadow);
-    text-align: center;
-}
+            max-width: 600px;
+            margin: 80px auto;
+            background-color: var(--bg-white);
+            padding: 50px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--card-shadow);
+            border-top: 7px solid var(--primary-color);
 
-.success-icon {
-    font-size: 5rem;
-    color: #28a745;
-    margin-bottom: 20px;
-}
+        }
 
-.ticket-details {
-    background: #f8f9fa;
-    padding: 25px;
-    border-radius: 10px;
-    margin: 30px 0;
-    text-align: left;
-    border-left: 5px solid var(--primary-color);
-}
-
-.ticket-details p {
+        .confirmation-container h2 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
     margin-bottom: 10px;
-    font-size: 1.1rem;
 }
 
-.ticket-details strong {
-    color: var(--primary-color);
+.confirmation-container p {
+    color: var(--text-light);
 }
-
-.confirmation-actions {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-}
-
-
-.admin-grid {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 30px;
-    margin-top: 40px;
-}
-
-
-.selection-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.selection-card {
-    background: var(--white);
-    padding: 40px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: var(--card-shadow);
-    transition: var(--transition);
-    cursor: pointer;
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.selection-card:hover {
-    transform: translateY(-10px);
-    border: 2px solid var(--primary-color);
-}
-
-.selection-card i {
-    font-size: 4rem;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-}
-
-.selection-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-.selection-card p {
-    color: #666;
-    margin-bottom: 25px; 
-}
-
-
+        .success-icon {
+            font-size: 5rem;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+        .ticket-details {
+            background: var(--bg-white);
+            padding: 25px;
+            border-radius: 7px;
+            margin: 30px 0;
+            text-align: left;
+             border: 3px solid var(--primary-color);
+            color: inherit;
+        }
+        .ticket-details p {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        .ticket-details strong {
+            color: var(--primary-color);
+        }
+        .confirmation-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+/* ====================================CONFIRMAÇÃO============================== */
 
 
 

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Abrir Nova Aula | Reclass</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .form-nova-aula { display: grid; gap: 20px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .input-group { display: flex; flex-direction: column; gap: 8px; }
+        .input-group label { font-weight: 600; color: var(--primary-color); }
+        .input-group input, .input-group select, .input-group textarea {
+            padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit;
+        }
+        .btn-submit {
+            background-color: var(--primary-color); color: white; padding: 15px;
+            border: none; border-radius: 8px; font-weight: 700; cursor: pointer;
+            transition: var(--transition); margin-top: 10px;
+        }
+        .btn-submit:hover { background-color: #1a337a; transform: translateY(-2px); }
+    </style>
+</head>
+<body>
+    <header class="padheader">
+        <div class="container vis-btn-logo">
+            <div class="logo"><img src="imgs/wizlog.webp" alt="Wiz Logo" onerror="this.src='https://via.placeholder.com/150x50?text=Wiz+Logo'"></div>
+            <nav class="btns-header"><ul><li><a href="index.html" class="bt-age">Sair do Admin</a></li>
+            <li><a href="index.html">Início</a></li></ul></nav>
+        </div>
+    </header>
+    <main class="container">
+        <div class="paddashP">
+            <aside class="menu-dash">
+                <h3>Painel Admin</h3>
+                <ul class="cont-menu-dash">
+                    <li><a href="dashP.html"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+                    <li><a href="alunos.html"><i class="fas fa-users"></i> Alunos</a></li>
+
+                    <li><a href="tdsaulas.html"><i class="fas fa-calendar-alt"></i> Todas as Aulas</a></li>
+                    <li><a href="maisaula.html" class="escrita-menu-dash"><i class="fas fa-plus-circle"></i> Abrir Nova Aula</a></li>
+                </ul>
+            </aside>
+            <section class="content">
+                <div class="sessad-dashP" style="max-width: 800px; margin: 0 auto;">
+                    <h3 style="margin-bottom: 25px; text-align: center;">Cadastrar Nova Aula de Reposição</h3>
+                    <form class="form-nova-aula">
+                        <div class="input-group">
+                            <label>Título da Aula</label>
+                            <input type="text" placeholder="Ex: Gramática Essencial - Unidade 5">
+                        </div>
+                        <div class="input-group">
+                            <label>Professor Responsável</label>
+                            <select>
+                                <option>Selecione um professor</option>
+                                <option>Ana Costa</option>
+                                <option>Ricardo Mendes</option>
+                                <option>Juliana Silva</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label>Data</label>
+                                <input type="date">
+                            </div>
+                            <div class="input-group">
+                                <label>Horário</label>
+                                <input type="time">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label>Vagas Totais</label>
+                                <input type="number" placeholder="Ex: 15">
+                            </div>
+                            <div class="input-group">
+                                <label>Unidade/Local</label>
+                                <select>
+                                    <option>Unidade Centro</option>
+                                    <option>Unidade Norte</option>
+                                    <option>Online</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label>Observações Adicionais</label>
+                            <textarea rows="3" placeholder="Informações importantes para os alunos..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Publicar Aula de Reposição</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Reclass - Sistema de Reposição de Aulas</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -2,16 +2,10 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendamento Confirmado | Reclass</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Professores | Reclass</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-        
-    </style>
 </head>
 <body>
     <header class="padheader">
@@ -24,33 +18,35 @@
                     <li><a href="index.html">Início</a></li>
                     <li><a href="aulas.html">Agendar Aula</a></li>
                     <li><a href="perfil.html"><i class="fas fa-user-circle"></i> Meu Perfil</a></li>
-                    <li><a href="index.html" class="bt-age">Sair</a></li>
+                    <li><a href="selecao-login.html" class="bt-age">Sair</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
     <main class="container">
-        <div class="confirmation-container">
-            <i class="fas fa-check-circle success-icon"></i>
-            <h2>Agendamento Confirmado!</h2>
-            <p>Sua aula de reposição foi agendada com sucesso. Um e-mail de confirmação foi enviado para você.</p>
-
-            <div class="ticket-details">
-                <p><strong>Aula:</strong> Inglês Intermediário</p>
-                <p><strong>Data:</strong> 15 de Outubro de 2026</p>
-                <p><strong>Horário:</strong> 19:00 - 20:30</p>
-                <p><strong>Local:</strong> Unidade Centro - Sala 04</p>
-                <p><strong>Professor:</strong> Ricardo Mendes</p>
-            </div>
-
-            <div class="confirmation-actions">
-                <a href="dashA.html" class="btn btn-primary">Ir para o Painel</a>
-
-            </div>
+        <div class="paddashP">
+             <aside class="menu-dash">
+                <h3>Olá, João Silva!</h3>
+                <ul class="cont-menu-dash">
+                    <li><a href="dashA.html" class="escrita-menu-dash"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="professores.html"><i class="fas fa-calendar-plus"></i> Professores</a></li>
+                    <li><a href="aulas.html"><i class="fas fa-calendar-plus"></i> Agendar Reposição</a></li>
+                </ul>
+            </aside>
+            <section class="content">
+                <div class="sessad-dashP">
+                    <h3>Lista de Professores</h3>
+                    <table>
+                        <thead><tr><th>Nome</th><th>Especialidade</th></tr></thead>
+                        <tbody>
+                            <tr><td>Ana Costa</td><td>Gramática</td></tr>
+                            <tr><td>Ricardo Mendes</td><td>Conversação</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
         </div>
     </main>
-
     <footer class="site-footer">
         <div class="container">
             <p>&copy; 2026 Reclass - Sistema de Reposição de Aulas</p>
