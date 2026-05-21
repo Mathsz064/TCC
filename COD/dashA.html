@@ -9,136 +9,52 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .dashboard-grid {
-            display: grid;
-            grid-template-columns: 1fr 3fr;
-            gap: 30px;
-            margin-top: 40px;
-        }
-        .sidebar {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: var(--card-shadow);
-            height: fit-content;
-        }
-        .sidebar-menu {
-            list-style: none;
-            margin-top: 20px;
-        }
-        .sidebar-menu li {
-            margin-bottom: 15px;
-        }
-        .sidebar-menu a {
-            text-decoration: none;
-            color: var(--text-color);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 600;
-            transition: var(--transition);
-        }
-        .sidebar-menu a:hover, .sidebar-menu a.active {
-            color: var(--primary-color);
-        }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-        .stat-card {
-            background: var(--white);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: var(--card-shadow);
-            text-align: center;
-        }
-        .stat-card h4 {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 10px;
-        }
-        .stat-card .value {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary-color);
-        }
-        .table-container {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: var(--card-shadow);
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            text-align: left;
-            padding: 15px;
-            border-bottom: 1px solid #eee;
-        }
-        th {
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-        .status-badge {
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-        .status-confirmado { background: #d4edda; color: #155724; }
-        .status-pendente { background: #fff3cd; color: #856404; }
-    </style>
+    
 </head>
 <body>
-    <header class="main-header">
-        <div class="container header-content">
+    <header class="padheader">
+        <div class="container vis-btn-logo">
             <div class="logo">
                 <img src="imgs/wizlog.webp" alt="Wiz Logo" onerror="this.src='https://via.placeholder.com/150x50?text=Wiz+Logo'">
             </div>
-            <nav class="main-nav">
+            <nav class="btns-header">
                 <ul>
                     <li><a href="index.html">Início</a></li>
                     <li><a href="aulas.html">Agendar Aula</a></li>
                     <li><a href="perfil.html"><i class="fas fa-user-circle"></i> Meu Perfil</a></li>
-                    <li><a href="selecao-login.html" class="btn-nav">Sair</a></li>
+                    <li><a href="selecao-login.html" class="bt-age">Sair</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main class="container">
-        <div class="dashboard-grid">
-            <aside class="sidebar">
+        <div class="paddashA">
+            <aside class="menu-dash">
                 <h3>Olá, João Silva!</h3>
-                <ul class="sidebar-menu">
-                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> Início</a></li>
+                <ul class="cont-menu-dash">
+                    <li><a href="index.html" class="escrita-menu-dash"><i class="fas fa-home"></i> Início</a></li>
                     <li><a href="aulas.html"><i class="fas fa-calendar-plus"></i> Agendar Reposição</a></li>
                 </ul>
             </aside>
 
             <section class="content">
-                <div class="stats-grid">
-                    <div class="stat-card">
+                <div class="sessa-dashP">
+                    <div class="card-dashP">
                         <h4>Aulas para Repor</h4>
-                        <div class="value">02</div>
+                        <div class="valor-dashP">02</div>
                     </div>
-                    <div class="stat-card">
+                    <div class="card-dashP">
                         <h4>Agendadas</h4>
-                        <div class="value">01</div>
+                        <div class="valor-dashP">01</div>
                     </div>
-                    <div class="stat-card">
+                    <div class="card-dashP">
                         <h4>Concluídas</h4>
-                        <div class="value">05</div>
+                        <div class="valor-dashP">05</div>
                     </div>
                 </div>
 
-                <div class="table-container">
+                <div class="sessad-dashP">
                     <h3>Meus Agendamentos</h3>
                     <table>
                         <thead>
@@ -155,7 +71,7 @@
                                 <td>Inglês Intermediário</td>
                                 <td>15/10/2026</td>
                                 <td>19:00</td>
-                                <td><span class="status-badge status-confirmado">Confirmado</span></td>
+                                <td><span class="status-aula status-confirmado">Confirmado</span></td>
                                 <td><a href="#" style="color: #dc3545;"><i class="fas fa-times"></i> Cancelar</a></td>
                             </tr>
                         </tbody>
